@@ -1,0 +1,17 @@
+name: Actions Test
+on:
+  push:
+    tags:
+        - "v*.*.*"
+jobs:
+  actions-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Clone
+        uses: actions/checkout@v2
+      - name: Build
+        run: cargo build --release
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/release/actions-test
