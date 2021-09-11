@@ -15,3 +15,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: target/release/actions-test
+          body_file: CHANGES.md
