@@ -1,3 +1,3 @@
 fn main() {
-    println!("Pushed a change!");
+    println!("Hello Word!");
 }
